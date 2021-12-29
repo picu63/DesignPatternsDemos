@@ -1,27 +1,26 @@
 ﻿using System;
 
-namespace CompositePattern
+namespace CompositePattern;
+
+internal class GraphicsPrinter : Composite
 {
-    internal class GraphicsPrinter : Composite
+    private readonly char _character;
+
+    public GraphicsPrinter(char character)
     {
-        private readonly char _character;
+        _character = character;
+    }
 
-        public GraphicsPrinter(char character)
+    public override void Add(Component component)
+    {
+        base.Add(component);
+        if (component is ICharacterPrinter consolePrinter)
         {
-            _character = character;
+            consolePrinter.Character = _character;
         }
-
-        public override void Add(Component component)
+        else
         {
-            base.Add(component);
-            if (component is ICharacterPrinter consolePrinter)
-            {
-                consolePrinter.Character = _character;
-            }
-            else
-            {
-                throw new NotSupportedException($"Nieprawidłowy typ komponentu. Spodziewano się typu {nameof(ICharacterPrinter)}");
-            }
+            throw new NotSupportedException($"Nieprawidłowy typ komponentu. Spodziewano się typu {nameof(ICharacterPrinter)}");
         }
     }
 }
