@@ -12,7 +12,7 @@ class Program
         graphicsPrinter.Add(new LinePrinter(10, new Point(2, 2), false));
         graphicsPrinter.Add(new RectanglePrinter(new Size(9, 5), new Point(15, 7)));
         printer.Add(graphicsPrinter);
-        Leaf textPrinter = new TextPrinter("To jest przykładowy string", new Point(30, 12));
+        Leaf textPrinter = new TextPrinter("This is example string", new Point(30, 12));
         printer.Add(textPrinter);
         printer.Operation();
         Console.ReadKey();

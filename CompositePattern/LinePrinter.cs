@@ -39,8 +39,3 @@ class LinePrinter : Leaf, ICharacterPrinter
 
     public char Character { get; set; }
 }
-
-internal interface ICharacterPrinter
-{
-    public char Character { get; set; }
-}
