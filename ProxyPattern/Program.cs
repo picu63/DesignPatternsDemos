@@ -7,6 +7,8 @@ using Microsoft.Extensions.Hosting;
 //        services
 //            .AddScoped<IExternalRunner, ExternalRunner>())
 //        .Build();
+
+// W tym przypadku wszystkie inne klasy które dziedziczą z IExternalRunner będą teraz wywoływać najpierw Check przed Run
 using IHost host = Host.CreateDefaultBuilder(args)
     .ConfigureServices((_, services) =>
         services
@@ -22,12 +24,12 @@ public interface IExternalRunner
 }
 
 
-// !!! SEALED !!!
+// !!! SEALED !!! - so we cannot just simply override run method
 public sealed class ExternalRunner : IExternalRunner
 {
     public void Run()
     {
-        Console.WriteLine("Running old code that cannot be changed");
+        Console.WriteLine($"Running code from {nameof(ExternalRunner)}"); // cannot be changed
     }
 }
 
@@ -46,6 +48,7 @@ public class CheckExternalRunner : IExternalRunner
 
     public void Run()
     {
+        Console.WriteLine($"{nameof(Run)} from {nameof(CheckExternalRunner)}");
         Check();
         externalRunner.Run();
     }
