@@ -11,7 +11,7 @@ public class SelfCheckout
 
     internal void SummaryShoppingBasket()
     {
-        State.OnPayForProduct();
+        State.OnPayment();
     }
 
     public Basket ShoppingBasket { get; set; } = new();
@@ -28,12 +28,14 @@ public class SelfCheckout
 
     public void OnPreviousClick()
     {
-        State.OnPreviousClick();
+        State.GoToPreviousState();
+        Console.WriteLine($"Current state is {State.Name}");
     }
 
     public void OnNextClick()
     {
-        State.OnNextClick();
+        State.GoToNextState();
+        Console.WriteLine($"Current state is {State.Name}");
     }
 
     public void ChangeState(SCState state)

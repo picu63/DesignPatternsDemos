@@ -6,10 +6,20 @@ public abstract class SCState
     {
         SelfCheckout = selfCheckout;
     }
-
+    public abstract string Name { get; protected set; }
     protected SelfCheckout SelfCheckout { get; set; }
-    public abstract void OnScanningProduct(Product product);
-    public abstract void OnNextClick();
-    public abstract void OnPreviousClick();
-    public abstract void OnPayForProduct();
+
+    public abstract void GoToNextState();
+
+    public abstract void GoToPreviousState();
+
+    public virtual void OnScanningProduct(Product product)
+    {
+        Console.WriteLine($"You cannot scan product on this {Name}");
+    }
+
+    public virtual void OnPayment()
+    {
+        Console.WriteLine($"You cant pay now - your are in {Name}");
+    }
 }
