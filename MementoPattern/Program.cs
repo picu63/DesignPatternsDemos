@@ -1,4 +1,5 @@
-﻿var committer = new Committer();
+﻿// Pseudo git - powiązanie wzorca momento z systemem kontroli wersji
+var committer = new Committer();
 var git = new Git(committer);
 committer.StageFiles(new List<string>(){"Test1.txt", "Test2.txt", "Test3.txt"});
 git.Commit("3 files to commit");
