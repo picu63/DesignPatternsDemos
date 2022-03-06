@@ -24,8 +24,8 @@ public interface IExternalRunner
 }
 
 
-// !!! SEALED !!! - so we cannot just simply override run method
-public sealed class ExternalRunner : IExternalRunner
+// !!! zauważ że tutaj jest SEALED !!! 
+public sealed class ExternalRunner /*Stara implementacja*/ : IExternalRunner
 {
     public void Run()
     {
@@ -33,6 +33,7 @@ public sealed class ExternalRunner : IExternalRunner
     }
 }
 
+// Proxy
 public class CheckExternalRunner : IExternalRunner
 {
     private readonly ExternalRunner externalRunner;
@@ -46,6 +47,7 @@ public class CheckExternalRunner : IExternalRunner
         Console.WriteLine("Checking something");
     }
 
+    // Użycie proxy
     public void Run()
     {
         Console.WriteLine($"{nameof(Run)} from {nameof(CheckExternalRunner)}");
