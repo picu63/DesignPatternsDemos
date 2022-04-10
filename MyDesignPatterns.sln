@@ -13,7 +13,9 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "StatePattern", "StatePatter
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ProxyPattern", "ProxyPattern\ProxyPattern.csproj", "{76ECAF0D-3B4B-4125-B518-EE92340B7200}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AbstractFactoryPattern", "AbstractFactoryPattern\AbstractFactoryPattern.csproj", "{0303D830-AA91-464F-BA2F-219B9406531C}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AbstractFactoryPattern", "AbstractFactoryPattern\AbstractFactoryPattern.csproj", "{0303D830-AA91-464F-BA2F-219B9406531C}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AdapterPattern", "AdapterPattern\AdapterPattern.csproj", "{5D88D1F5-6702-401B-8957-8CC7BE3EBC4B}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -45,6 +47,10 @@ Global
 		{0303D830-AA91-464F-BA2F-219B9406531C}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{0303D830-AA91-464F-BA2F-219B9406531C}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{0303D830-AA91-464F-BA2F-219B9406531C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{5D88D1F5-6702-401B-8957-8CC7BE3EBC4B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5D88D1F5-6702-401B-8957-8CC7BE3EBC4B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5D88D1F5-6702-401B-8957-8CC7BE3EBC4B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5D88D1F5-6702-401B-8957-8CC7BE3EBC4B}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
