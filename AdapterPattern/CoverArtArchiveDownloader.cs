@@ -4,10 +4,11 @@ public class CoverArtArchiveDownloader : ICoverDownloader
 {
     public CoverArtArchiveDownloader()
     {
-        httpClient.BaseAddress = new Uri("https://coverartarchive.org");
+        HttpClient.BaseAddress = new Uri("https://coverartarchive.org");
     }
 
-    private readonly HttpClient httpClient = new();
+    public HttpClient HttpClient { get; } = new();
+
     public FileInfo? DownloadCover(AlbumInfo albumInfo)
     {
         // implementation ...

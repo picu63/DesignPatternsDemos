@@ -4,9 +4,11 @@ public class DiscogsDownloader : ICoverDownloader
 {
     public DiscogsDownloader()
     {
-        httpClient.BaseAddress = new Uri("https://api.discogs.com");
+        HttpClient.BaseAddress = new Uri("https://api.discogs.com");
     }
-    private readonly HttpClient httpClient = new();
+
+    public HttpClient HttpClient { get; } = new();
+
     public FileInfo? DownloadCover(AlbumInfo albumInfo)
     {
         // implementation ...

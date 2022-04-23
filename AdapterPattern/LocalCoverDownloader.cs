@@ -9,6 +9,8 @@ public class LocalCoverDownloader : ICoverDownloader
         this.localCoverSearcher = localCoverSearcher;
     }
 
+    public HttpClient HttpClient => null!; // Not usable in this downloader
+
     public FileInfo? DownloadCover(AlbumInfo albumInfo)
     {
         return localCoverSearcher.FindCover(albumInfo);
