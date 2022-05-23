@@ -1,4 +1,6 @@
-﻿namespace AbstractFactoryPattern;
+﻿using System.Runtime.InteropServices.ComTypes;
+
+namespace AbstractFactoryPattern;
 
 public class PdfDocument : IDocument
 {

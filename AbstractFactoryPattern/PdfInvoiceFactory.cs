@@ -11,6 +11,10 @@ public class PdfInvoiceFactory : IInvoiceFactory<PdfDocument>
 
     public PdfDocument CreateDocument(Invoice invoice)
     {
-        return new PdfDocument() { Name = $"PdfDoc: {invoice.Id}", Data = System.Text.Encoding.UTF8.GetBytes("pdf document") };
+        return new PdfDocument()
+        {
+            Name = $"PdfDoc: {invoice.Id}", 
+            Data = System.Text.Encoding.UTF8.GetBytes("pdf document")
+        };
     }
 }
