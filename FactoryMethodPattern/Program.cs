@@ -17,7 +17,7 @@ foreach (var employee in employees)
     foreach (var factory in factories)
     {
         Console.WriteLine($"Calculating raise for {employee} from {factory.CalculatorName}");
-        var raise = factory.CalculateRaise(employee);
+        var raise = factory.CalculateRaise(employee); // main factory method
         Console.WriteLine($"Raise calculated: {raise}");
         basePayment += raise;
         Console.WriteLine($"{nameof(basePayment)} increase to {basePayment}");
