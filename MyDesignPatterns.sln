@@ -17,7 +17,7 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AbstractFactoryPattern", "A
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AdapterPattern", "AdapterPattern\AdapterPattern.csproj", "{5D88D1F5-6702-401B-8957-8CC7BE3EBC4B}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "FactoryMethodPattern", "FactoryMethodPattern\FactoryMethodPattern.csproj", "{C21A4FD1-970F-4177-95FE-CC48EB2A3EB8}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MultipleDesignPatternsInOne", "FactoryMethodPattern\MultipleDesignPatternsInOne.csproj", "{C21A4FD1-970F-4177-95FE-CC48EB2A3EB8}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SingletonPattern", "SingletonPattern\SingletonPattern.csproj", "{2CAFA64F-B935-45A4-91EF-E563DDB6548A}"
 EndProject

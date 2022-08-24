@@ -1,4 +1,4 @@
-﻿namespace FactoryMethodPattern;
+﻿namespace MultipleDesignPatternsInOne;
 
 public class LoginProcessor
 {

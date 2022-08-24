@@ -1,6 +1,6 @@
-﻿using FactoryMethodPattern.Orders;
+﻿using MultipleDesignPatternsInOne.Orders;
 
-namespace FactoryMethodPattern.Payments;
+namespace MultipleDesignPatternsInOne.Payments;
 
 public class StrapiGate : PaymentGate
 {

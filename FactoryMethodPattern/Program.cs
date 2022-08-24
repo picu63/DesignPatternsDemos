@@ -1,6 +1,6 @@
-﻿using FactoryMethodPattern;
-using FactoryMethodPattern.Orders;
-using FactoryMethodPattern.ShoppingBaskets;
+﻿using MultipleDesignPatternsInOne;
+using MultipleDesignPatternsInOne.Orders;
+using MultipleDesignPatternsInOne.ShoppingBaskets;
 
 var milk = new Product("Milk", 1.2m);
 var shoppingBasket = new ShoppingBasket()

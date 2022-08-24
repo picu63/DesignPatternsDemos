@@ -1,7 +1,6 @@
-﻿using System.Diagnostics;
-using FactoryMethodPattern.Orders;
+﻿using MultipleDesignPatternsInOne.Orders;
 
-namespace FactoryMethodPattern.Payments;
+namespace MultipleDesignPatternsInOne.Payments;
 
 public interface IPaymentGateFactory
 {

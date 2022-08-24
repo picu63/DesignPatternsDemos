@@ -1,4 +1,4 @@
-﻿namespace FactoryMethodPattern.ShoppingBaskets;
+﻿namespace MultipleDesignPatternsInOne.ShoppingBaskets;
 
 public record Product(string Name, decimal EntityPrice)
 {

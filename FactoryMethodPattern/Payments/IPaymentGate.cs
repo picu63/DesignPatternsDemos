@@ -1,6 +1,4 @@
-﻿using FactoryMethodPattern.Orders;
-
-namespace FactoryMethodPattern.Payments;
+﻿namespace MultipleDesignPatternsInOne.Payments;
 
 public interface IPaymentGate
 {

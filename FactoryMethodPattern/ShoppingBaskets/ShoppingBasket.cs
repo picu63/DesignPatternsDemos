@@ -1,4 +1,4 @@
-﻿namespace FactoryMethodPattern.ShoppingBaskets;
+﻿namespace MultipleDesignPatternsInOne.ShoppingBaskets;
 
 public class ShoppingBasket
 {

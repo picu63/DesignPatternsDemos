@@ -1,7 +1,7 @@
-﻿using FactoryMethodPattern.Orders;
-using FactoryMethodPattern.Payments;
+﻿using MultipleDesignPatternsInOne.Orders;
+using MultipleDesignPatternsInOne.Payments;
 
-namespace FactoryMethodPattern.ShoppingBaskets;
+namespace MultipleDesignPatternsInOne.ShoppingBaskets;
 
 public class ShoppingBasketProcessor
 {

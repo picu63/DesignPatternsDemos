@@ -1,4 +1,4 @@
-﻿namespace FactoryMethodPattern.Orders;
+﻿namespace MultipleDesignPatternsInOne.Orders;
 
 public class Order
 {
