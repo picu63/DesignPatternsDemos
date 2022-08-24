@@ -1,8 +1,12 @@
 ﻿using FactoryMethodPattern;
+using FactoryMethodPattern.Orders;
+using FactoryMethodPattern.ShoppingBaskets;
 
+var milk = new Product("Milk", 1.2m);
 var shoppingBasket = new ShoppingBasket()
-    .AddProduct(new Product("Milk", 1.2m))
+    .AddProduct(milk)
+    .AddProduct(milk)
     .AddProduct(new Product("Chips", 10.99m))
     .AddProduct(new Product("Water", 0.30m));
-
-new ShoppingBasketProcessor().Process(shoppingBasket);
+var orderProvider = new OrderProvider();
+new ShoppingBasketProcessor(new LoginProcessor(), new OrderFactory(orderProvider), orderProvider).Process(shoppingBasket);
