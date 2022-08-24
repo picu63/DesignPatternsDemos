@@ -1,4 +1,7 @@
 ﻿// See https://aka.ms/new-console-template for more information
+
+using FactoryMethodPattern;
+
 Console.WriteLine("Factory Method");
 
 var factories = new List<RaiseCalculator>() {new SeniorityRaiseCalculator(), new SexRaiseCalculator()};

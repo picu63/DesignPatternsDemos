@@ -1,4 +1,6 @@
-﻿public class SeniorityRaiseCalculator : RaiseCalculator
+﻿namespace FactoryMethodPattern;
+
+public class SeniorityRaiseCalculator : RaiseCalculator
 {
     public override decimal CalculateRaise(Employee employee)
     {
