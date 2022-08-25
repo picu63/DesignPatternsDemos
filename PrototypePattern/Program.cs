@@ -26,7 +26,7 @@ public abstract class Person
 
 }
 
-public class Employee : Person
+public class Employee : Person, ICloneable
 {
     public Manager Manager { get; set; }
     public override string Name { get; set; }
@@ -44,6 +44,11 @@ public class Employee : Person
         var settings = new JsonSerializerSettings {TypeNameHandling = TypeNameHandling.All};
         var objectAsJson = JsonConvert.SerializeObject(this, typeof(Employee), settings);
         return JsonConvert.DeserializeObject<Person>(objectAsJson, settings);
+    }
+
+    public object Clone()
+    {
+        throw new NotImplementedException(); // can be used, but don't have option for deep copy
     }
 }
 
