@@ -5,11 +5,11 @@ using Newtonsoft.Json;
 Console.WriteLine("Prototype Pattern");
 
 var manager = new Manager("Cindy");
-var managerClone = (Manager)manager.Clone();
+var managerClone = (Manager)manager.Copy();
 Console.WriteLine($"Manager was cloned: {managerClone.Name}");
 
 var employee = new Employee("Kevin", manager);
-var employeeClone = (Employee)employee.Clone(true);
+var employeeClone = (Employee)employee.Copy(true);
 Console.WriteLine($"Employee was cloned: {employeeClone.Name}, with manager {employeeClone.Manager.Name}");
 
 // change the manager name
@@ -22,7 +22,7 @@ public abstract class Person
 {
     public abstract string Name { get; set; }
 
-    public abstract Person Clone(bool deepClone);
+    public abstract Person Copy(bool deepClone);
 
 }
 
@@ -37,7 +37,7 @@ public class Employee : Person
         Manager = manager;
     }
 
-    public override Person Clone(bool deepClone)
+    public override Person Copy(bool deepClone)
     {
         if (!deepClone) return (Person)MemberwiseClone();
 
@@ -56,7 +56,7 @@ public class Manager : Person
         Name = name;
     }
 
-    public override Person Clone(bool deepClone = default)
+    public override Person Copy(bool deepClone = default)
     {
         if (!deepClone) return (Person) MemberwiseClone();
 
